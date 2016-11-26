@@ -32,6 +32,7 @@ def main():
 	logging.debug('Orginaly: %s', str(A))
 
 	remove_duplicated_edge(A)
+	print "after remove_duplicated_edge, A has " + str(len(A)) + "vertex."
 
 if __name__ == '__main__':
 	main()

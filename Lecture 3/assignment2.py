@@ -36,13 +36,14 @@ def find_cut(A):
 
 def min_cut(A):
 
-	trials = int(len(A)**2 * math.log(len(A)))
+	# trials = int(len(A)**2 * math.log(len(A)))
+	trials = int(len(A) * math.log(len(A)))
 	min_cross = float('inf')
 	cut = None
 
 	for i in range(trials):
 		graph = copy.deepcopy(A)
-		trial = find_cut(graph)
+		trial = find_cut(graph) # trail is a adjacency list
 		cut_edges = len(trial.values()[0])
 
 		print 'current cut_edges :', cut_edges

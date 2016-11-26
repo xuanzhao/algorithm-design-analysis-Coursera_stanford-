@@ -82,7 +82,7 @@ def main():
 	array = map(int, lines)
 	sorted_array = sorted(array)
 	interval_hash = range(-10000, 10000+1)
-	interval_bisec = range(2500, 4000+1)
+	interval_bisec = range(-10000, 10000+1)
 	
 	start_hash = time()
 	count = cal_2SUM_hash(array, interval_hash)
