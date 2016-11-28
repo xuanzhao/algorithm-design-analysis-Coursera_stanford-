@@ -37,8 +37,8 @@ def main():
 			medians.append(calc_median(stream))
 
 	print 'sum median is:', sum(medians) # 46831213
-	answer = reduce(lambda x,y: (x+y)%10000, medians)
-	#answer = sum(medians) % 10000
+	#answer = reduce(lambda x,y: (x+y)%10000, medians)
+	answer = sum(medians) % 10000
 	print 'medians calculate modules with 10000 is:', answer
 
 

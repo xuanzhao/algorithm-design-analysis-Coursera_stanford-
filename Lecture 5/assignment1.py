@@ -38,7 +38,7 @@ def dijkstra(G, source=1):
 
 		u = extract_min(rest_vs)
 
-		for vw in G[u]: # vs == G[v], vw = (v, distance)
+		for vw in G[u]: # vs == G[u], vw = (v, distance)
 			v, w = vw[0], vw[1]
 			relax(u, v, w)
 

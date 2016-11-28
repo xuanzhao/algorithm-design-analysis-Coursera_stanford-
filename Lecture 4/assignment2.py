@@ -14,6 +14,7 @@ def readDirectedGraph(filename):
         v_to = int(num2)
         max_v = max(v_from, v_to)
         
+        # add dummy vertex for the prepare
         while len(adjlist) < max_v:
             adjlist.append([])
         while len(adjlist_reversed) < max_v:
@@ -42,6 +43,7 @@ def DFS_Loop_1(graph_rev, n):
     explored = [False]*n
     sorted_by_finish_time = [None]*n
     
+    # the reversed dont matter
     for i in reversed(range(n)):
         if not explored[i]:
             DFS_1(graph_rev, i)
@@ -68,6 +70,7 @@ def DFS_Loop_2(graph):
     explored = [False]*len(graph)
     res = []
     
+    # the reversed is very important
     for i in reversed(range(len(graph))):
         if not explored[sorted_by_finish_time[i]]:
             scc_size = 0
